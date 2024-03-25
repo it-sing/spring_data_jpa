@@ -48,6 +48,10 @@ public class CategoryController {
     public ResponseEntity <?> findCategoryById (@PathVariable Integer id){
         return ResponseEntity.ok(categoryServiceImpl.findCategoryById(id));
     }
+    @GetMapping("{name}")
+    public ResponseEntity <?> findCategoryByName (@PathVariable String name){
+        return ResponseEntity.ok(categoryServiceImpl.findCategoryByName(name));
+    }
     @PutMapping("{id}")
     void editCategoryById(@PathVariable Integer id,
                            @RequestBody CategoryRequest request){
@@ -58,7 +62,6 @@ public class CategoryController {
     void deleteCategoryById(@PathVariable Integer id){
         categoryServiceImpl.deleteCategoryById(id);
     }
-
 
 }
 

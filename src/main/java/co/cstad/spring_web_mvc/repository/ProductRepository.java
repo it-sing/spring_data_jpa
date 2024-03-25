@@ -9,7 +9,7 @@ import java.util.Optional;
 @Repository
 public interface ProductRepository extends JpaRepository<Product ,Integer> {
     boolean existsByName(String name);
-    Optional<Product> findByUuid(String name);
+    Optional<Product> findByUuid(String uuid);
     boolean existsByUuid(String uuid);
     void  deleteByUuid(String uuid);
 }

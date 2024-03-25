@@ -23,16 +23,11 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
     private String uuid;
-
-
     @Column(length = 40 , unique = true , nullable = false)
     private String name;
     private Double price;
     private Integer qty;
-
     private LocalDateTime  importedDate;
-
     private Boolean status;
 }
